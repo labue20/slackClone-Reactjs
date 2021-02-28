@@ -7,6 +7,8 @@ import AddIcon from '@material-ui/icons/Add';
 
 function Sidebar(props) {
 
+    const 
+
     console.log(props);
     return (
        <Container>
