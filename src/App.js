@@ -7,6 +7,8 @@ import Login from './component/Login';
 import styled from 'styled-components';
 import Header from './component/Header';
 import Sidebar from './component/Sidebar';
+
+
 import React, { useEffect, useState } from 'react';
 
 import db from './firebase';
@@ -39,26 +41,24 @@ function App() {
       <Router>
         <Container>
           <Header/>
-
+         
           <Main>
-          <Sidebar rooms={rooms}/>
-          
+              <Sidebar rooms={rooms}/>
+                <Switch>
+                
+                  <Route path="/room">
 
-        <Switch>
-          <Route path="/room">
-            <Chat/>
+                  </Route>
+                  <Chat/>
 
-          </Route>
+                  <Route path="/">
+                  <login/>
+                 </Route>
 
-          <Route path="/">
-            <login/>
-          </Route>
-
-        </Switch>
+                </Switch>
 
         </Main>
-        </Container>
-        
+      </Container>
       </Router>
     </div>
   );
@@ -69,14 +69,12 @@ export default App
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-  //background:orange;
   display:grid;
   grid-template-rows: 38px auto;
 
   `
 
   const Main = styled.div `
-    background :  white;
     display: grid;
     grid-template-columns: 260px auto;
   `
