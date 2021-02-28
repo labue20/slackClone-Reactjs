@@ -14,22 +14,25 @@ import db from './firebase';
 
 function App() {
 
+  const [ rooms, setRooms] = useState([]);
+
   const getChannels = () => {
     db.collection('rooms').onSnapshot((snapshot) => {
-      snapshot.docs.map((doc)=>{
-        console.log(doc.data());
-      })
+      setRooms(snapshot.docs.map((doc)=>{
+        return { id: doc.id, name: doc.data().name }
+        //return doc.data();
+      }))
       
     })
 
   }
 
   useEffect(() => {
-    console.log("hello use effect")
+    getChannels();
 
   },[])
 
-  getChannels();
+  console.log(rooms);
   
   return (
     <div className ="App">
@@ -38,7 +41,7 @@ function App() {
           <Header/>
 
           <Main>
-          <Sidebar/>
+          <Sidebar rooms={rooms}/>
           
 
         <Switch>
