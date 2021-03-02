@@ -13,7 +13,7 @@ function ChatMessage() {
         
            <MessageContent>
                 <Name>
-                    Willz 
+                    sonia
                     <span>3/2/2021</span>
                 </Name>
 
@@ -32,10 +32,15 @@ const Container = styled.div`
     padding: 8px 20px;
     display: flex;
     align-items: center;
+
+    :hover {
+        color: gray
+    }
 `
 const MessageContent = styled.div`
     display: flex;
     flex-direction: column;
+    
 `
 
 const UserAvater = styled.div`
@@ -63,5 +68,6 @@ const Name = styled.span`
 `
 
 const Text = styled.span`
+    
 
 `
