@@ -13,7 +13,7 @@ function ChatMessage() {
         
            <MessageContent>
                 <Name>
-                    sonia
+                    sonia clarisse 
                     <span>3/2/2021</span>
                 </Name>
 

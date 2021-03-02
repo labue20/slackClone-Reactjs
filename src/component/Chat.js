@@ -44,7 +44,7 @@ export default Chat;
 const Container = styled.div`
     display: grid;
     grid-template-rows: 64px auto min-content;
-    background
+    
 `
 const Header = styled.div`
     padding-left:20px;

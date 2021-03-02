@@ -2,6 +2,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import SendIcon from '@material-ui/icons/Send';
+import FormatBoldOutlinedIcon from '@material-ui/icons/FormatBoldOutlined';
+import FormatUnderlinedIcon from '@material-ui/icons/FormatUnderlined';
+import FormatItalicIcon from '@material-ui/icons/FormatItalic';
 
 function ChatInput() {
     return (
@@ -16,6 +19,11 @@ function ChatInput() {
                     
                 </SendButton>
                 </form>
+                <MessageEdit>
+                    <FormatBoldOutlinedIcon/>
+                    <FormatUnderlinedIcon/>
+                    <FormatItalicIcon/>
+                </MessageEdit>
             </InputContainer>
         </Container>
     )
@@ -70,5 +78,8 @@ const InputContainer = styled.div`
 `
 const Send = styled(SendIcon)`
     color : #D9D9D9;
+
+`
+const MessageEdit = styled.div`
 
 `
