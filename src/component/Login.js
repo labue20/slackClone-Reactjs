@@ -1,8 +1,26 @@
 
 import React from 'react'
 import styled from 'styled-components';
+import { auth , provider } from '../firebase';
 
-function Login() {
+function Login(props) {
+
+    const signIn  = () =>{
+        auth.signInWithPopup(provider)
+        .then((result) =>{
+            const newUser ={
+                name: result.user.displayName,
+                photos: result.user.photoURL,
+            }
+            localStorage.setItem('user', JSON.stringify(newUser));
+            props.setUser(newUser);
+            
+        })
+        .catch((error)=>{
+            alert(error.message)
+        })
+      
+    }
     return (
         <Container>
             <Content>
@@ -11,7 +29,7 @@ function Login() {
                 
                 "/>
                 <h1>Sign in Slack</h1>
-                <SignInButton>
+                <SignInButton  onClick={()=>signIn()}>
                     Sign in with Google
                 </SignInButton>
                

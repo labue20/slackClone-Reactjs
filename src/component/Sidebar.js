@@ -53,7 +53,7 @@ function Sidebar(props) {
                     {
                         props.rooms.map(item => (
                             <Channel>
-                                # {item.id}
+                                # {item.name}
                           </Channel>
                         ))
                     }
