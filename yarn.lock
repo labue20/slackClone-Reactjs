@@ -10111,9 +10111,8 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@*", "react@^16.8.0 || ^17.0.0", "react@^17.0.1", "react@>= 16", "react@>= 16.8.0", "react@>=16.6.0", "react@17.0.1":
-  "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
-  "resolved" "https://registry.npmjs.org/react/-/react-17.0.1.tgz"
+"react@*", "react@^16.8.0 || ^17.0.0", "react@>= 16", "react@>= 16.8.0", "react@>=16.6.0", "react@17.0.1", "react@file:../../../../../../../../usr/local/lib/node_modules/react":
+  "resolved" "file:../../../../../../../../usr/local/lib/node_modules/react"
   "version" "17.0.1"
   dependencies:
     "loose-envify" "^1.1.0"

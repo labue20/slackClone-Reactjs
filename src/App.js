@@ -7,14 +7,9 @@ import Login from './component/Login';
 import styled from 'styled-components';
 import Header from './component/Header';
 import Sidebar from './component/Sidebar';
-import { auth, provider } from "./firebase";
-
-
 import React, { useEffect, useState } from 'react';
-
-
 import db from './firebase';
-
+import { auth, provider } from "./firebase";
 
 function App() {
 
@@ -39,8 +34,10 @@ function App() {
 
   console.log("user in app state", user);
 
-  const signOut = () =>{
-    auth.signOut().then(()=>{
+
+
+  const signOut = () => {
+    auth.signOut().then(()=> {
       localStorage.removeItem('user');
       setUser(null);
     })
@@ -56,17 +53,19 @@ function App() {
 
 
         <Container>
-          <Header signoutuser={user}/>
+          <Header signOut={user} user={user}/>
          
           <Main>
               <Sidebar rooms={rooms}/>
                 <Switch>
 
-                  <Route path="/room">
+                  <Route path="/room/:channelId">
 
                   </Route>
                   <Chat/>
-
+                  <Route path="/">
+                    Select or Create Channel
+                  </Route>
                 
 
                 </Switch>

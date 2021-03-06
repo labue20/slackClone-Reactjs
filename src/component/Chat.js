@@ -1,12 +1,34 @@
 
-import React from 'react'
+import React , { useEffect,useState } from 'react'
 import styled from 'styled-components'
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import { InfoOutlined, InfoRounded } from '@material-ui/icons';
 import ChatInput  from './ChatInput';
 import ChatMessage from './ChatMessage';
+import  db from '../firebase';
+import { useParams } from 'react-router-dom';
 
 function Chat() {
+
+    // let { channelId } = useParams ();
+    // const [ channel , setChannel ] = useState();
+
+    // const getChannels = () => {
+    //     db.collection('rooms')
+    //     .doc(channelId)
+    //     .onSnapshot((snapshot)=>{
+    //         setChannel(snapshot.data());
+    //     })
+
+    // }
+    
+    // useEffect(()=>{
+    //     getChannels();
+    // },[channelId])
+
+
+
+
     return (
         <Container>
             <Header>
